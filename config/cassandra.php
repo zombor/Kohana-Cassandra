@@ -1,6 +1,6 @@
 <?php
 
-$config['thrift_base'] = '/path/to/thrift/lib/php/src/'
+$GLOBALS['THRIFT_ROOT'] = $config['thrift_base'] = '/usr/share/php/Thrift';
 
 $config['default'] = array
 (
