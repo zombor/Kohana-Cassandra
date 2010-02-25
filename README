@@ -1,1 +1,3 @@
 This is a kohana library for interfacing with Cassandra databases.
+
+This software is based on the original Zend class written by James Bathgate: http://github.com/julesbravo/Zend_Cassandra.

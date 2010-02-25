@@ -1,5 +1,13 @@
 <?php
-
+/**
+* Cassandra
+*
+* @package        Cassandra
+* @author         Jeremy Bush
+* @author         James Bathgate
+* @copyright      (c) 2010 Jeremy Bush, James Bathgate
+* @license        http://www.opensource.org/licenses/isc-license.txt
+*/
 class Cassandra_Core {
 
 	protected $config = array();
@@ -9,6 +17,13 @@ class Cassandra_Core {
 
 	public function __construct($config = FALSE)
 	{
+		require_once Kohana_Config::get('cassandra.thrift_base').'packages/cassandra/Cassandra.php';
+		require_once Kohana_Config::get('cassandra.thrift_base').'packages/cassandra/cassandra_types.php';
+		require_once Kohana_Config::get('cassandra.thrift_base').'transport/TSocket.php';
+		require_once Kohana_Config::get('cassandra.thrift_base').'protocol/TBinaryProtocol.php';
+		require_once Kohana_Config::get('cassandra.thrift_base').'transport/TFramedTransport.php';
+		require_once Kohana_Config::get('cassandra.thrift_base').'transport/TBufferedTransport.php';
+
 		if (is_string($config))
 		{
 			$name = $config;
